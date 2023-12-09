@@ -3,7 +3,7 @@ name = "Acoustic-Modeling"
 version = "0.1.1"
 authors = [
   { name="Oscar Lin", email="olin2702@floridapoly.edu" },
-  { name="Carmen Mann", email="EMAIL HERE" },
+  { name="Carmen Mann", email="cmann4894@floridapoly.edu" },
   { name="Gerardo Claudio", email="EMAIL HERE" },
 ]
 description = "Visualize waveform of audio file, and compute the RT60 of the audio file."
