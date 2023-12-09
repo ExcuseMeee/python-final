@@ -1,4 +1,3 @@
-#test
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 from tkinter.filedialog import askopenfile
@@ -8,11 +7,11 @@ class View(ttk.Frame):
         super().__init__(parent)
 
         #label
-        self.label = ttk.Label(win, text="Pick a File: ")
+        self.label = ttk.Label(self, text="Pick a File: ")
         self.label.pack(pady = 10)
 
         #file button
-        self.browse = ttk.Button(win, text="Browse Files", command=browseFile).pack(pady=15)
+        self.browse = ttk.Button(self, text="Browse Files", command=browseFile).pack(pady=15)
 
     
     def browseFile(self):
@@ -36,5 +35,4 @@ class View(ttk.Frame):
         #Button to combine plots
         #OPTIONAL: add Buttons to alternate between frequencies
 
-    
-
+test = View()
