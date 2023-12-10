@@ -190,9 +190,14 @@ class Controller:
 
         return (avgRT60, difference)
 
+'''
+# NOTE: EXAMPLE CODE, uncomment for testing. delete in prod
 # using the controller
-# con = Controller("media/Clap.m4a")
-# con.calcRT60_difference()
-# con.lowFreqPlot()
-# con.midFreqPlot()
-# con.highFreqPlot()
+con = Controller("media/Clap.m4a")
+avgRT60, difference = con.calcRT60_difference() # this function returns the average rt60 and the difference
+lowFreqRT60 = con.lowFreqPlot() # this function plots the low freq AND returns the RT60 value
+midFreqRT60 = con.midFreqPlot() # this function plots the mid freq AND returns the RT60 value
+highFreqRT60 = con.highFreqPlot() # this function plots the high freq AND returns the RT60 value
+
+# diplay avgrt60, difference, lowFreqRT60, midFreqRT60, highFreqRT60 using tkinter in view.py
+'''
