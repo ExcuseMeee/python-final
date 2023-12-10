@@ -182,7 +182,7 @@ class ComputeAudio:
 
 
 # EXAMPLE
-
+'''
 DUMMY_PATH = "media/Clap.m4a"  # path to audio file. edit to reflect your own audio file
 
 
@@ -295,3 +295,4 @@ print(f"Avg rt60 = {avg_rt60}. Difference from 0.5sec = {difference}")
 # additional plot will be the specgram
 c.computeSpectrumData()
 plt.show()
+'''
