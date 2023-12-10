@@ -3,6 +3,8 @@ from tkinter import ttk, filedialog, messagebox
 from tkinter.filedialog import askopenfile
 from matplotlib.figure import Figure
 from matplotlib import gridspec
+from model import ProcessAudio
+from model import ComputeAudio
 
 class View(ttk.Frame):
     def __init__(self):
