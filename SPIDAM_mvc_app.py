@@ -10,3 +10,16 @@ class App(tk.Tk):
 
         self.title('Audio Visualizer')
 
+        view = View()
+        view.grid(row=0, column=0, padx=15, pady=15)
+
+        self.view.audio = audio
+
+        controller = Controller(audio)
+
+        view.set_controller(controller)
+
+if __name__ == "__main__":
+    app = App()
+    app.mainloop()
+

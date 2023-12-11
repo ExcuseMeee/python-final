@@ -15,16 +15,13 @@ class View(ttk.Frame):
         #label
         self.label = ttk.Label(self, text="Load a File: ")
         self.label.pack(pady = 10)
-
         
 
-    '''
     def browseFile(self):
         file = filedialog.askopenfilename(filetypes=[("Audio Files", "*.mp3 *.wav")])
         if file:
             self.audio = file
             self.audio.exportasWav(file)
-    '''
 
     #sets the controller
     def set_controller(self, controller):
