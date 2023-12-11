@@ -15,7 +15,7 @@ class ProcessAudio:
         self.isValid = self.fileType in self.validFileTypes
         self.destinationPath = ""
 
-    def cleanAudio(self) -> AudioSegment | None:
+    def cleanAudio(self) -> AudioSegment:
         """
         Helper Method, do not call directly
         """
