@@ -189,15 +189,24 @@ class Controller:
         difference = avgRT60 - 0.5
 
         return (avgRT60, difference)
+    
+    def displaySpecgram(self):
+        self.model.computeSpectrumData()
+        plt.title("Specgram")
+        plt.xlabel("Time (s)")
+        plt.ylabel("Frequency (Hz)")
+        plt.colorbar()
+        plt.show()
 
-'''
-# NOTE: EXAMPLE CODE, uncomment for testing. delete in prod
-# using the controller
-con = Controller("media/Clap.m4a")
-avgRT60, difference = con.calcRT60_difference() # this function returns the average rt60 and the difference
-lowFreqRT60 = con.lowFreqPlot() # this function plots the low freq AND returns the RT60 value
-midFreqRT60 = con.midFreqPlot() # this function plots the mid freq AND returns the RT60 value
-highFreqRT60 = con.highFreqPlot() # this function plots the high freq AND returns the RT60 value
 
-# diplay avgrt60, difference, lowFreqRT60, midFreqRT60, highFreqRT60 using tkinter in view.py
-'''
+# # NOTE: EXAMPLE CODE, uncomment for testing. delete in prod
+# # using the controller
+# con = Controller("media/Clap.m4a")
+# avgRT60, difference = con.calcRT60_difference() # this function returns the average rt60 and the difference
+# lowFreqRT60 = con.lowFreqPlot() # this function plots the low freq AND returns the RT60 value
+# midFreqRT60 = con.midFreqPlot() # this function plots the mid freq AND returns the RT60 value
+# highFreqRT60 = con.highFreqPlot() # this function plots the high freq AND returns the RT60 value
+# con.displaySpecgram()
+
+# # diplay avgrt60, difference, lowFreqRT60, midFreqRT60, highFreqRT60 using tkinter in view.py
+

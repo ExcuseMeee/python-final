@@ -28,6 +28,8 @@ class View(tk.Tk):
         combined_btn.pack()
         raw_btn = tk.Button(self, text="Raw", command=lambda: self.displayGraph("raw") )
         raw_btn.pack()
+        specgram_btn = tk.Button(self, text="Specgram", command=lambda: self.displayGraph("extra") )
+        specgram_btn.pack()
 
         self.length_textVar = tk.StringVar()
         length_display = tk.Label(self, textvariable=self.length_textVar)
@@ -80,6 +82,10 @@ class View(tk.Tk):
         elif (frequency=="raw"):
             self.con.displayWave()
             self.RT60_textVar.set("")
+        elif (frequency== "extra"):
+            self.con.displaySpecgram()
+            self.RT60_textVar.set("")
+
         else:
             return
 
