@@ -146,6 +146,12 @@ class Controller:
         length = self.audio_length
         t_axis = np.linspace(0, length, raw_data.shape[0])
 
+        plt.plot(t_axis, raw_data)
+        plt.title("Raw Waveform")
+        plt.xlabel("Time (s)")
+        plt.ylabel("Amplitude (dB)")
+        plt.show()
+
         # plot graphs
 
     def displayCombinedFreqs(self) -> None:
@@ -211,6 +217,6 @@ class Controller:
 # midFreqRT60 = con.midFreqPlot() # this function plots the mid freq AND returns the RT60 value
 # highFreqRT60 = con.highFreqPlot() # this function plots the high freq AND returns the RT60 value
 # con.displaySpecgram()
-
+# con.displayWave()
 # # diplay avgrt60, difference, lowFreqRT60, midFreqRT60, highFreqRT60 using tkinter in view.py
 
