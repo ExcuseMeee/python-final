@@ -198,6 +198,10 @@ class Controller:
         plt.colorbar()
         plt.show()
 
+    def getResonantFreq(self):
+        freq = self.model.computeResonantFreq()
+        return freq
+
 
 # # NOTE: EXAMPLE CODE, uncomment for testing. delete in prod
 # # using the controller
