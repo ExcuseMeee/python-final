@@ -9,7 +9,7 @@ class View(tk.Tk):
     def __init__(self):
         super().__init__()
         self.protocol("WM_DELETE_WINDOW", self.onClose)
-        self.geometry('400x250')
+        self.geometry('500x500')
         self.title("Audio Analyzer and Visualizer")
         self.filePath = tk.StringVar() # stores file path str
         
