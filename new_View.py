@@ -46,6 +46,8 @@ class View(tk.Tk):
         status = tk.Label(self, textvariable=self.status_textVar)
         status.pack()
 
+        self.resonantFreq = tk.StringVar()
+
 
 
     
@@ -62,6 +64,7 @@ class View(tk.Tk):
         self.con = Controller(file)
         self.status_textVar.set(f'File selected: {file}')
         self.length_textVar.set(f'Audio Length {round(self.con.audio_length, 2)}')
+        self.resonantFreq.set(f'Resonant Frequency: {self.con.getResonantFreq()}')
 
     def displayGraph(self, frequency: str):
         if(not self.filePath.get()):
