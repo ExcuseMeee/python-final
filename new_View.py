@@ -14,22 +14,22 @@ class View(tk.Tk):
         self.filePath = tk.StringVar() # stores file path str
         
         btn = tk.Button(self, text="Browse Audio File", command=self.browseFile, height=3, width=20)
-        btn.pack(side=tk.TOP, pady=40)
+        btn.pack(side=tk.TOP, pady=20)
+
+        specgram_btn = tk.Button(self, text="Specgram", command=lambda: self.displayGraph("extra"), height=3, width=15)
+        specgram_btn.pack(side=tk.TOP)
 
         low_btn = tk.Button(self, text="Low", command=lambda: self.displayGraph("low"), height=3, width=10)
-        low_btn.pack(side=tk.LEFT, padx=15, pady=0)
-        ##low_btn.grid(row = 1, column = 0, padx = 100)
+        low_btn.pack(side=tk.LEFT, padx=25, pady=0)
         mid_btn = tk.Button(self, text="Mid", command=lambda: self.displayGraph("mid"), height=3, width=10)
-        mid_btn.pack(side=tk.LEFT, padx=15)
-       ## mid_btn.grid(row = 1, column = 2, padx = 100)
+        mid_btn.pack(side=tk.LEFT, padx=10)
         high_btn = tk.Button(self, text="High", command=lambda: self.displayGraph("high"), height=3, width=10)
-        high_btn.pack(side=tk.RIGHT)
+        high_btn.pack(side=tk.RIGHT, padx=15)
         combined_btn = tk.Button(self, text="Combined", command=lambda: self.displayGraph("combined") )
-        combined_btn.pack()
+        combined_btn.pack(side=tk.BOTTOM)
         raw_btn = tk.Button(self, text="Raw", command=lambda: self.displayGraph("raw") )
-        raw_btn.pack()
-        specgram_btn = tk.Button(self, text="Specgram", command=lambda: self.displayGraph("extra") )
-        specgram_btn.pack()
+        raw_btn.pack(side=tk.BOTTOM)
+        
 
         self.length_textVar = tk.StringVar()
         length_display = tk.Label(self, textvariable=self.length_textVar)
