@@ -3,7 +3,7 @@ from tkinter import ttk, filedialog, messagebox
 from tkinter.filedialog import askopenfile
 from matplotlib.figure import Figure
 from matplotlib import gridspec
-from model import ProcessAudio
+#from model import ProcessAudio
 from model import ComputeAudio
 
 class View(ttk.Frame):
@@ -17,17 +17,19 @@ class View(ttk.Frame):
         self.label.pack(pady = 10)
         
 
-    def browseFile(self):
-        file = filedialog.askopenfilename(filetypes=[("Audio Files", "*.mp3 *.wav")])
-        if file:
-            self.audio = file
-            self.audio.exportasWav(file)
-
     #sets the controller
     def set_controller(self, controller):
         self.controller = controller
         #file button
         self.browse = ttk.Button(self, text="Browse Files", command=self.controller.browseFile).pack(pady=15)
+
+
+    def browseFile(self):
+        file = filedialog.askopenfilename(filetypes=[("Audio Files", "*.mp3 *.wav")])
+        if file:
+            self.audio = file
+            self.controller(file)
+
 
     #graph and data display
     def graphDataDisplay(self, model):

@@ -13,8 +13,6 @@ class App(tk.Tk):
         view = View()
         view.grid(row=0, column=0, padx=15, pady=15)
 
-        self.view.audio = audio
-
         controller = Controller(audio)
 
         view.set_controller(controller)
