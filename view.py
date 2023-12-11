@@ -1,3 +1,4 @@
+'''
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 from tkinter.filedialog import askopenfile
@@ -66,3 +67,5 @@ class View(ttk.Frame):
 if __name__ == '__main__':
     app = View()
     app.mainloop()
+
+'''
