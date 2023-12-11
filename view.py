@@ -3,9 +3,8 @@ from tkinter import ttk, filedialog, messagebox
 from tkinter.filedialog import askopenfile
 from matplotlib.figure import Figure
 from matplotlib import gridspec
-from model import *
-from controller import *
-
+from model import ProcessAudio
+from model import ComputeAudio
 
 class View(ttk.Frame):
     def __init__(self):
@@ -15,16 +14,13 @@ class View(ttk.Frame):
         #label
         self.label = ttk.Label(self, text="Load a File: ")
         self.label.pack(pady = 10)
-
         
 
-    
     def browseFile(self):
         file = filedialog.askopenfilename(filetypes=[("Audio Files", "*.mp3 *.wav")])
         if file:
             self.audio = file
             self.audio.exportasWav(file)
-    
 
     #sets the controller
     def set_controller(self, controller):
